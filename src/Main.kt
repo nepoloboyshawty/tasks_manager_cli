@@ -1,4 +1,7 @@
+import modules.showTasks
+
 const val EXIT = 0
+const val SHOW_TASKS = 1
 
 fun main() {
     while (true) {
@@ -10,6 +13,10 @@ fun main() {
 
         when (answer) {
             EXIT -> break
+            SHOW_TASKS -> {
+                showTasks()
+                print("\n")
+            }
             else -> {
                 print("[ОШИБКА] Неверный вариант ответа!\n\n")
                 continue
